@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhruv Sawant | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+  <style>
+body {
+      background-color: #121212;
+      color: #f5f5f5;
+      font-family: 'Roboto Mono', monospace;
+      padding: 0rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+    /* Navigation bar at top right */
+nav {
+  position: absolute; /* changed from fixed */
+  top: 1rem;
+  right: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  z-index: 10; /* make sure it's above the logo */
+  font-weight: 600;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+nav a {
+      color: #138ac1;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+nav a:hover {
+      color: #81d4fa;
+      text-decoration: underline;
+    }
+
+h1, h2, h3, h4 {
+      color: #4fc3f7; /* Blue for main headings and subsections */
+      margin-bottom: 0.5rem;
+      margin-left: 2rem;
+    }
+p, li {
+      color: #ffffff;
+    }
+ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+a:hover {
+      text-decoration: underline;
+    }
+    /* Logo blending and dynamic effect */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures full cover */
+  z-index: 0;
+}
+
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: #f5f5f5;
+  z-index: 1;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #138ac1;
+}
+
+.hero-text p {
+  margin: 0.5rem 0 0;
+  font-weight: bold;
+}
+
+.logo:hover {
+      opacity: 1;
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 15px #81d4fa);
+    }
+.project, .paper, .book, .competition, .patent, .hobby {
+      margin-bottom: 2rem;
+      margin-left: 2rem;
+    }
+
+    /* Skill bars container */
+.skill-container {
+      margin-bottom: 1rem;
+      margin-left: 2rem;
+    }
+.skill-label {
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: #ffffff;
+    }
+.skill-bar {
+      background-color: #333;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 15px;
+      width: 100%;
+      max-width: 400px;
+    }
+.skill-level {
+      height: 100%;
+      background-color: #ffffff;
+      border-radius: 5px;
+    }
+
+    /* Responsive padding to avoid nav overlap */
+main {
+      padding-top: 0rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <!-- Move nav inside the hero -->
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#competitions">Competitions</a>
+        <a href="#patents">Patents</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <img src="assets/images/logo.png" alt="Dhruv Logo" class="logo" />
+      <div class="hero-text">
+        <h1>Dhruv Sawant</h1>
+        <p><strong>Mechanical Engineering Student at Symbiosis Institute of Technology, Pune</strong></p>
+      </div>
+    </header>
+
+
+    <h2 id="projects">Projects</h2>
+
+    <h3>Liquid Rocket Engine System</h3>
+    <div class="project">
+      <p>Designed and tested a small liquid rocket engine and working on the pressure feed system for the engine.</p>
+      <img src="assets/images/engine.gif" alt="Rocket Firing Animation" style="width: 600px; border-radius: 10px;" />
+    </div>
+
+    <h3>Digital Twin - FDM 3D Printer</h3>
+    <div class="project">
+      <p>Built a digital twin with mounted sensors to create a real-time REST API-driven ecosystem.</p>
+      <img src="assets/images/digital_twin.gif" alt="Digital Twin" style="width: 600px; height: 400px; border-radius: 10px;" />
+    </div>
+
+    <h3>Design of Precision Dispensing & Segregation System</h3>
+    <div class="project">
+      <p>Design of Precision Dispensing & Segregation System for LAM Research Challenge.</p>
+      <img src="assets/images/liq_dispenser.png" alt="Liquid Dispenser" style="width: 600px; height: 400px; border-radius: 10px;" />
+    </div>
+
+    <h3>Pill Dispenser for Medical Bot (SCOBO)</h3>
+    <div class="project">
+      <p>Design of Pill Dispensing System.</p>
+      <img src="assets/images/pill_dispenser.gif" alt="Liquid Dispenser" style="width: 600px; height: 600px; border-radius: 10px;" />
+    </div>
+
+    <h2 id="publications">Publications</h2>
+
+    <h3>Journal Papers</h3>
+    <div class="paper">
+      <p><a href="https://doi.org/10.1007/s42401-024-00305-1" target="_blank">Prediction of burn rate of AP–HTPB solid propellant using machine learning</a></p>
+      <p><a href="https://doi.org/10.41870-024-02173-6" target="_blank">NSAI-based algorithm for energy absorption in CoCrMo materials</a></p>
+      <p><a href="https://doi.org/10.3389/fmats.2024.1375200" target="_blank">Tribological analysis of Ti-6Al-4V alloy using ML</a></p>
+      <p><a href="https://doi.org/10.1371/journal.pone.0305744" target="_blank">Tensile strength of AM CM 247LC alloy using ML</a></p>
+      <p><a href="https://doi.org/10.1007/s12008-024-01981-1" target="_blank">Enhancing microhardness in PMEDM using ML</a></p>
+      <p><a href="https://doi.org/10.17212/1994-6309-2024-26.1-175-193" target="_blank">EDM of cryogenic BeCu alloys</a></p>
+      <p><a href="https://doi.org/10.1007/s00170-023-12269-1" target="_blank">Surface prediction in cryogenic machining of alloys</a></p>
+    </div>
+
+    <h3>Book Chapters</h3>
+    <div class="book">
+      <p><a href="https://doi.org/10.1515/9783111240244-011" target="_blank">kNN for taper angle prediction in AWJM</a></p>
+      <p><a href="https://doi.org/10.1201/9781003437369" target="_blank">Flexural Strength Estimation using kNN - CRC Press</a></p>
+      <p><a href="https://doi.org/10.1201/9781003437369-11" target="_blank">Impact Strength Estimation using kNN - CRC Press</a></p>
+    </div>
+
+    <h3>Conference Papers</h3>
+    <div class="paper">
+      <p><a href="https://doi.org/10.1145/3647444.3652471" target="_blank">Neurosymbolic ML for UTS prediction in AM specimens - ICIMMI 2024</a></p>
+    </div>
+
+    <h2 id="skills">Software & Skills</h2>
+    <div class="skill-container">
+      <div class="skill-label">CAD</div>
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 90%;"></div>
+      </div>
+    </div>
+    <div class="skill-container">
+      <div class="skill-label">MATLAB</div>
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 85%;"></div>
+      </div>
+    </div>
+    <div class="skill-container">
+      <div class="skill-label">FEA</div>
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 75%;"></div>
+      </div>
+    </div>
+    <div class="skill-container">
+      <div class="skill-label">Additive Manufacturing</div>
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 90%;"></div>
+      </div>
+    </div>
+    <div class="skill-container">
+      <div class="skill-label">ML/DL</div>
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 40%;"></div>
+      </div>
+    </div>
+    <div class="skill-container">
+      <div class="skill-label">Python</div>
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 60%;"></div>
+      </div>
+    </div>
+
+    <h2 id="competitions">Competitions</h2>
+    <div class="competition">
+      <ul>
+        <li>1st Student Prize in NAFED 08 National Level, VSSC ISRO & IIT - Hyderabad India</li>
+        <li>LAM Research Challenge, IISc, Bangalore</li>
+        <li>GI-AI-SC 2025 Mechanical Tools Design using AI based Nature Inspired Methods</li>
+      </ul>
+    </div>
+
+    <h2 id="patents">Patents</h2>
+    <div class="patent">
+      <ul>
+        <li>MULTI-PURPOSE NUMERICAL SOLVING CALCULATOR</li>
+        •  A smart calculator capable of solving Engineering Mechanics problems.
+      </ul>
+    </div>
+
+    <h2 id="hobbies">Hobbies</h2>
+    <div class="hobby">
+      <ul>
+        <li>Photography</li>
+        <li>Videography (YouTube)</li>
+        <li>Films</li>
+        <li>Cycling</li>
+        <li>Biking</li>
+      </ul>
+    </div>
+
+    <h2 id="contact">Contact</h2>
+    <ul>
+      <li><a href="mailto:dhruv.sawant.btech2022@sitpune.edu.in">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/dhruv-sawant-a135a2229/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://x.com/ichnisanshi217" target="_blank">X</a></li>
+    </ul>
+  </main>
+</body>
+</html>
