@@ -1,4 +1,3 @@
-# .github/workflows/deploy.yml
 name: Deploy Portfolio
 
 on:
@@ -14,6 +13,8 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages    # <-- add this environment here
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
